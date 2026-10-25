@@ -1,0 +1,51 @@
+@font-face { font-family: "Big Shoulders"; src: url("BigShoulders-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "Jura"; src: url("Jura-Medium.ttf"); }
+
+:root {
+  --ink: #060a13;
+  --navy: #0e1628;
+  --panel: #151f33;
+  --line: #2e3a52;
+  --text: #eef2f8;
+  --muted: #8c9ab2;
+  --amber: #ffb020;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 30%, var(--navy), var(--ink) 70%) fixed;
+  color: var(--text);
+  font: 17px/1.65 "Segoe UI", system-ui, sans-serif;
+}
+
+a { color: var(--amber); }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 64px; }
+
+header { display: flex; align-items: center; gap: 14px; padding: 22px 0; }
+header img { width: 44px; height: 44px; border-radius: 50%; }
+header a.brand { font: 700 26px "Big Shoulders", sans-serif; letter-spacing: 1px; color: var(--text); text-decoration: none; text-transform: uppercase; }
+header nav { margin-left: auto; font-family: "Jura", sans-serif; }
+header nav a { margin-left: 18px; color: var(--muted); text-decoration: none; }
+header nav a:hover { color: var(--amber); }
+
+.banner { width: 100%; border-radius: 14px; border: 1px solid var(--line); display: block; }
+
+h1, h2 { font-family: "Big Shoulders", sans-serif; text-transform: uppercase; letter-spacing: 1px; line-height: 1.05; }
+h1 { font-size: clamp(40px, 8vw, 64px); margin: 36px 0 8px; }
+h2 { font-size: 30px; margin: 36px 0 6px; color: var(--amber); }
+.lead { font-family: "Jura", sans-serif; color: var(--amber); letter-spacing: 3px; text-transform: uppercase; font-size: 14px; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 28px 0; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+.card b { display: block; font: 700 22px "Big Shoulders", sans-serif; text-transform: uppercase; color: var(--amber); }
+
+.cta { display: inline-block; margin-top: 18px; padding: 12px 22px; border-radius: 999px; background: var(--amber); color: var(--ink); font-weight: 700; text-decoration: none; }
+
+.doc { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 8px 28px 24px; margin-top: 24px; }
+.doc p, .doc li { color: #d6dce7; }
+
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); }
